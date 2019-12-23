@@ -13,6 +13,7 @@ import Public from "./components/public";
 import Private from "./components/private";
 import Login from "./components/login";
 import Register from "./components/register";
+import PrivateRoute from "./components/private-route";
 
 function App({ fetchUser }) {
   useLayoutEffect(() => {
@@ -27,8 +28,7 @@ function App({ fetchUser }) {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/public" component={Public} />
-            <Route path="/private" component={Private} />
-
+            <PrivateRoute path="/private" component={Private} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
           </Switch>
